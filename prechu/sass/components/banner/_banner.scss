@@ -1,0 +1,93 @@
+.banner {
+    background: url(../images/background.png) center 100%;
+    background-size: 120%;
+    height: rem(485px);
+
+    &_inner {
+        @include site_width;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &_image {
+        margin-top: rem(40px);
+    }
+
+    &_wrapper {
+        @include font ('SegoeWP', 42.35px, $white);
+        margin-top: rem(120px);
+
+        &_title {
+            font-weight: 300;
+        }
+
+        &_description {
+            font-size: rem(26.35px);
+            width: rem(280px);
+            margin: rem(20px) 0;
+            line-height: rem(40px);
+        }
+
+        &_link {
+             
+            display: inline-block;
+            background-color: $blue;
+            width: rem(160px);
+            height: rem(30px);
+            font-family: 'SegoeWP' !important;
+            font-size: rem(22.35px);
+            color: $white;
+            padding: rem(5px) rem(10px) rem(5px) rem(5px);
+            position: relative;
+            text-align: end;
+
+            &::before {
+                font-family: 'icomoon' !important;
+                font-size: rem(23px);
+                margin-right: rem(10px);
+                position: absolute;
+                left: rem(10px);
+                top: rem(8.5px);
+            }
+        }
+    }
+
+    @include respond-to (to_desktop) {
+        height: rem(245px);
+
+        &_inner {
+            width: 100%;
+        }
+
+        &_image {
+            height: rem(220px);
+            margin-top: rem(20px);
+        }
+
+        &_wrapper {
+            margin: rem(20px) 0;
+
+            &_title {
+                font-size: rem(30.98px);
+            }
+
+            &_description {
+                font-size: rem(22.91px);
+                width: rem(250px);
+                margin: rem(15px) 0 rem(25px);
+                line-height: rem(30px);
+            }
+
+            &_link {
+                width: rem(225px);
+                height: rem(43px);
+                font-size: rem(31.08px);
+
+                &::before {
+                    font-size: rem(33px);
+                    top: rem(10px);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.copyright{
+    border-top: 1px solid $color4;
+    padding: 2.125rem 0 2.9375rem;
+    @include font($color2, 0.95rem, auto);
+    text-align: center;
+}

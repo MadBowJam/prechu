@@ -1,0 +1,25 @@
+.cart{
+    &_title{
+        @include font($color3,2.625rem, 2.75rem);
+        margin-top: 5.625rem;  
+    }
+    &_wrapper{
+        display: flex;
+        justify-content: space-between;
+    }
+    &_img{
+        margin-top: 2.1875rem;
+        background: url(../img/cart.png) no-repeat;
+        background-size: contain;
+        width: 22.5rem;
+        height: 17.5rem;
+    }
+    &_description_title{
+        @include font($color3, 1.625rem,2.75rem);
+    }
+    &_paragraph{
+        @include font($color2, 0.95rem, 2.25rem);
+        width: 28.75rem;
+    }
+
+}

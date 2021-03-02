@@ -1,0 +1,61 @@
+.shopping {
+    @include site_width(rem(1024px), rem(50px) auto);
+    display: flex;
+    justify-content: space-around;
+
+    &_title {
+        @include font ('SegoeWP', 42.35px, $gray3, 400);
+        text-align: center;
+    }
+
+    &_image {
+        margin-top: rem(20px);
+    }
+
+    &_wrapper {
+        &.list {
+            @include font ('SegoeWPN', 26.35px, $gray3);
+            margin-top: rem(50px);
+        }
+
+        &_list {
+            font-size: rem(15.35px);
+
+            &_item {
+                margin-top: rem(15px);
+
+                &:first-child {
+                    margin-top: rem(20px);
+                }
+            }
+        }
+    }
+
+    @include respond-to (to_desktop) {
+        width: 100%;
+        flex-direction: column;
+
+        &_image {
+            display: block;
+            width: rem(205px);
+            margin: rem(35px) auto rem(20px);
+        }
+
+        &_wrapper {
+            display: block;
+
+            &.list {
+                font-size: rem(34.35px);
+                margin: 0 auto;
+            }
+
+            &_title {
+                font-weight: 300;
+            }
+
+            &_list {
+                font-size: rem(17.35px);
+            }
+        }
+    }
+}
