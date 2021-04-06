@@ -1,0 +1,44 @@
+@mixin respond-to($media) {
+    @if $media == to_desktop {
+        @media (max-width: $desktop - 1) {
+            @content;
+        }
+    }
+
+    @if $media == mobile {
+        @media (max-width: $tablet - 1) {
+            @content;
+        }
+    }
+}
+
+@mixin clearfix {
+    clear: both;
+    display: table;
+    width: 100%;
+}
+
+@mixin site_width($width: $desktop, $margin: 0 auto) {
+    margin: $margin;
+    width: $width;
+}
+
+@mixin global_padding ($padding: 0 rem(30px)){
+    width: 100%;
+    padding: $padding;
+}
+
+@mixin font ($family, $px, $color, $font_weight:300) {
+    font-family: $family;
+    font-size: rem($px);
+    color: $color;
+    font-weight: $font_weight;
+}
+
+@function rem($px) {
+    @return ($px / $base_font_size) * 1rem;
+}
+
+
+
+
